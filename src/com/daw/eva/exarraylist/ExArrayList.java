@@ -90,6 +90,12 @@ public class ExArrayList {
 		for(int i=0;i<s.size();i++){
 		   System.out.println(s.get(i).id+" "+s.get(i).getNombre()+" "+s.get(i).percentage);
 		}
+		
+		System.out.println("&&&&&&&&&&&&&&&&&");
+		
+		for(Student st: s ){
+			   System.out.println(st.id+" "+st.getNombre()+" "+st.percentage);
+			}
 	}
 
 }
