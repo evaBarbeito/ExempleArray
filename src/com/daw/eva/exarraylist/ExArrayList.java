@@ -3,6 +3,8 @@ package com.daw.eva.exarraylist;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class ExArrayList {
 
@@ -195,13 +197,32 @@ public class ExArrayList {
 		
 		Iterator<Student> itll2=ll.iterator();
 		while (itll2.hasNext()) {
-        	System.out.println(itll2.next().getNombre()+ ", " ) ; //+ itll.next().getPercentage());
+        	System.out.println(itll2.next().getNombre()+ ", " + String.valueOf(itll2.next().getPercentage()));
         }
         
 		
-        System.out.println("------List Interface----------");
+        System.out.println("------Implementem List Interface----------");
         
+		List<String> l=new ArrayList<String>(); // a la dreta, qualsevol classe que la implementi
 		
+		l.add("sofa");
+		l.add("bed");
+		l.add("chair");
+		l.add("carpet");
+		
+		l.add(1, "table");
+		l.remove("carpet");
+		l.remove(0);
+		
+		ListIterator li=l.listIterator();
+		
+		while (li.hasNext()) {
+        	System.out.println(li.next());
+        }
+        
+		System.out.println(l.get(2));
+        
+        
 	}
 
 }
