@@ -11,4 +11,22 @@ public class Student extends Persona {
 	      this.percentage = percentage;
 
 	  }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+	  
+	  
 }

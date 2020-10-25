@@ -2,6 +2,7 @@ package com.daw.eva.exarraylist;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 public class ExArrayList {
 
@@ -147,9 +148,59 @@ public class ExArrayList {
 		System.out.println( o.compareTo(new Student("Maria",41,78.8)));
 		
 		
+		System.out.println("------LinkedList----------");
+		// Permet Duplicats, manté l' ordre, i fàcil manipulació
 		
 		
+		Student s5 = new Student("Sandra",21,78.8);
+		Student s6 = new Student("Ben",22,89.6);
+		Student s7 = new Student("Fanny",23,90.7);
+		Student s8 = new Student("Roy",45,98.9);
+		Student s9=  new Student("X",7,80.8);
+	
+		LinkedList<Student> ll = new LinkedList<Student>();
+		ll.add(s5);
+		ll.add(s6);
+		ll.add(s7);
+		ll.add(s8);
+		ll.add(s9);
 		
+		ll.add(0, s9);
+		Iterator<Student> itll=ll.iterator();
+		
+		while (itll.hasNext()) {
+        	System.out.println(itll.next().getNombre()+ ", " ) ; //+ itll.next().getPercentage());
+        }
+        
+		System.out.println("------addAll(C)+addFirst+addLast----------");
+		
+		LinkedList<Student> ll1 = new LinkedList<Student>();
+		ll1.add(new Student("Alma",56,78.9));
+		ll1.add(new Student("Cris",656,78.9));
+		
+		
+		//Podem afegir una collection que és una altre llista, de manera ordenada
+		ll.addAll(ll1);
+		
+		//Pot actuar de cua i de llista
+		Student e=new Student("Capicua",777,77.7);
+		//a arraylist no hi són, addlast equival a add. o fer add(0,)
+		ll.addFirst(e);
+		ll.addLast(e);
+		
+		ll.remove(2);
+		ll.remove(s7);
+		
+		//ll.clear();
+		
+		Iterator<Student> itll2=ll.iterator();
+		while (itll2.hasNext()) {
+        	System.out.println(itll2.next().getNombre()+ ", " ) ; //+ itll.next().getPercentage());
+        }
+        
+		
+        System.out.println("------List Interface----------");
+        
 		
 	}
 
