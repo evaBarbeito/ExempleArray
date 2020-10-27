@@ -144,13 +144,6 @@ public class ExArrayList {
 		}
 		
 		Student o=new Student("Eva",1,78.8);
-		System.out.println( "Conté Eva a estudiants?:" + s.contains(o));
-		
-		Persona oo=new Persona("Matteo");
-		ArrayList<Persona> p = new ArrayList<Persona>();
-		p.add(new Persona("Matteo"));
-		System.out.println( "Conté Matteo?:" + p.contains(oo));
-		
 		
 		System.out.println( o.compareTo(new Student("Eva",1,78.8)));
 		
