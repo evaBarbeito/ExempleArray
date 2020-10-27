@@ -134,7 +134,7 @@ public class ExArrayList {
 		   System.out.println(s.get(i).id+" "+s.get(i).getNombre()+" "+s.get(i).percentage);
 		}
 		
-		System.out.println("----------------");
+		System.out.println("------Array d Estudiants----------");
 		
 		s.set(1, new Student("Carla",5,100));
 		s.set(s.size()-1,new Student("Oliver",6,98.9));
@@ -144,7 +144,14 @@ public class ExArrayList {
 		}
 		
 		Student o=new Student("Eva",1,78.8);
-		System.out.println( s.contains(o));
+		System.out.println( "Conté Eva a estudiants?:" + s.contains(o));
+		
+		Persona oo=new Persona("Matteo");
+		ArrayList<Persona> p = new ArrayList<Persona>();
+		p.add(new Persona("Matteo"));
+		System.out.println( "Conté Matteo?:" + p.contains(oo));
+		
+		
 		System.out.println( o.compareTo(new Student("Eva",1,78.8)));
 		
 		System.out.println( o.compareTo(new Student("Maria",41,78.8)));
@@ -198,6 +205,7 @@ public class ExArrayList {
 		Iterator<Student> itll2=ll.iterator();
 		while (itll2.hasNext()) {
         	System.out.println(itll2.next().getNombre()+ ", " + String.valueOf(itll2.next().getPercentage()));
+        	
         }
         
 		
@@ -218,9 +226,20 @@ public class ExArrayList {
 		
 		while (li.hasNext()) {
         	System.out.println(li.next());
+        	//li.hasPrevious();
+        	//li.previous();
         }
         
-		System.out.println(l.get(2));
+		
+		System.out.println("------List Iterator back------------");		
+		
+		while (li.hasPrevious()) {
+        	System.out.println(li.previous());
+        	//System.out.println(li.hasPrevious());
+        	//li.previous();
+        }
+        
+		//System.out.println(l);
         
         
 	}

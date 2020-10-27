@@ -1,6 +1,6 @@
 package com.daw.eva.exarraylist;
 
-public class Student extends Persona {
+public class Student extends Persona   {
 	 
 	  int id;
 	  double percentage;

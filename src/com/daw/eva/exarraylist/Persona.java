@@ -25,7 +25,7 @@ public class Persona implements Comparable<Persona>{
 		int i=0;
 		if (arg0.getNombre()==this.getNombre()) { i=1;}
 		else {i=0;	}
-		//(arg0.getNombre()==this.getNombre())?i=0;i=1;
+		
 		return i;
 		
 	}
