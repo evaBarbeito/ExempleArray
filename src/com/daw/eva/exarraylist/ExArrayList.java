@@ -89,12 +89,27 @@ public class ExArrayList {
             System.out.println(selem);
          }
         
-        System.out.println("------Iterator----------");
+        System.out.println("------Iterator-////---------");
         
         Iterator it=food.iterator();
         
         while (it.hasNext()) {
         	System.out.println(it.next());
+        }
+        
+        System.out.println("------List Iterator-forward--------");
+        ListIterator lili=food.listIterator();
+		
+		while (lili.hasNext()) {
+        	System.out.println(lili.next());
+        	
+        }
+        
+		System.out.println("------List Iterator back------------");		
+		
+		while (lili.hasPrevious()) {
+        	System.out.println(lili.previous());
+        	
         }
         
         System.out.println("------Objects----------");
@@ -129,6 +144,7 @@ public class ExArrayList {
 		s.add(s3);
 		s.add(s4);
 	    
+	
 		
 		for(int i=0;i<s.size();i++){
 		   System.out.println(s.get(i).id+" "+s.get(i).getNombre()+" "+s.get(i).percentage);
@@ -219,8 +235,7 @@ public class ExArrayList {
 		
 		while (li.hasNext()) {
         	System.out.println(li.next());
-        	//li.hasPrevious();
-        	//li.previous();
+        	
         }
         
 		
@@ -228,8 +243,7 @@ public class ExArrayList {
 		
 		while (li.hasPrevious()) {
         	System.out.println(li.previous());
-        	//System.out.println(li.hasPrevious());
-        	//li.previous();
+        	
         }
         
 		//System.out.println(l);
